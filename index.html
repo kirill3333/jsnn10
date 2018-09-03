@@ -1,209 +1,423 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Shower Presentation Engine</title>
+	<title>ES.Next features review (es7|es8|es9)</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="node_modules/shower-ribbon/styles/styles.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/styles/solarized-light.min.css">
 	<style>
         .shower {
             --slide-ratio: calc(16 / 9);
         }
+
+		.code h4 {
+			margin: 0;
+		}
+
+		.code pre {
+			margin: 0;
+		}
     </style>
 </head>
 <body class="shower list">
 
 	<header class="caption">
-		<h1>Shower Presentation Engine</h1>
-		<p>Yours Truly, Famous Inc.</p>
+		<h1>ES.Next features review (es7|es8|es9)</h1>
+		<p>Novikov Kirill</p>
 	</header>
 
 	<section class="slide" id="cover">
-		<h2>Shower Presentation Engine</h2>
-		<p>Brought to you by <a href="http://pepelsbey.net">Vadim Makeev</a></p>
-		<figure>
-			<img class="cover" src="pictures/cover.jpg" alt="Hands on the orange typewriter in a park">
-			<figcaption class="copyright right white">
-				<a href="http://fiftyfootshadows.net/">© John Carey</a>
-			</figcaption>
-		</figure>
+		<h2>ES.Next features review</h2>
+		<h3>es7 | es8 | es9</h3>
+		<p>Brought to you by <a href="http://pepelsbey.net">Kirill Novikov</a></p>
+
+
+
 		<style>
+			#cover::after {
+				visibility: hidden;
+			}
+
+			#cover {
+				background-color: rgb(243, 219, 93);
+			}
+
+			#cover h3 {
+				text-align:center;
+				color: #000;
+				margin: 0;
+			}
+
 			#cover h2 {
-				margin: 30px 0 0;
-				color: white;
-				text-align: center;
-				font-size: 70px;
+				margin:30px 0 0;
+				text-align:center;
+				color: #000;
+				font-size:90px;
 			}
-
 			#cover p {
-				margin: 10px 0 0;
-				text-align: center;
-				color: white;
-				font-style: italic;
-				font-size: 20px;
+				margin:10px 0 0;
+				text-align:center;
+				color: #fcffd6;
+				font-style:italic;
+				font-size:20px;
 			}
-
 			#cover p a {
-				color: white;
+				color: #fcffd6;
+
 			}
 		</style>
 	</section>
 
 	<section class="slide">
-		<h2>Shower key features</h2>
-		<ol>
-			<li>Built on HTML, CSS and JavaScript</li>
-			<li>Works in all modern browsers</li>
-			<li>Themes are separated from engine</li>
-			<li>Fully keyboard accessible</li>
-			<li>Printable to PDF</li>
-		</ol>
-		<p class="note">Shower ['ʃəuə] noun. A person or thing that shows.</p>
-	</section>
-
-	<section class="slide">
-		<h2>Plain text on your slides</h2>
-		<p>Lorem ipsum dolor sit amet, consectetur <a href="#4">adipisicing</a> elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, <em>quis nostrud</em> exercitation ullamco laboris <strong>nisi ut aliquip</strong> ex ea commodo consequat. Duis aute irure <i>dolor</i> in reprehenderit in voluptate velit esse cillum <b>dolore</b> eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in <code>&lt;culpa&gt;</code> qui officia deserunt mollit anim id est laborum.</p>
-	</section>
-
-	<section class="slide">
-		<h2>Two columns if you like</h2>
-		<div class="columns two">
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
-			<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.</p>
-		</div>
-	</section>
-
-	<section class="slide">
-		<h2>All kind of lists</h2>
-		<ol>
-			<li>Simple lists are marked with bullets</li>
-			<li>Ordered lists begin with a number</li>
-			<li>You can even nest lists one inside another
-				<ul>
-					<li>Or mix their types</li>
-					<li>But do not go too far</li>
-					<li>Otherwise audience will be bored</li>
-				</ul>
-			</li>
-			<li>Look, seven rows exactly!</li>
-		</ol>
-	</section>
-
-	<section class="slide">
-		<h2>Serious citations</h2>
 		<figure>
-			<blockquote>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.</p>
-			</blockquote>
-			<figcaption>Marcus Tullius Cicero</figcaption>
+			<img class="cover" src="pictures/what.jpg" alt="What is ECMA, ECMAScript, ECMA-262, TC-39">
 		</figure>
 	</section>
 
 	<section class="slide">
-		<h2>Code samples</h2>
+		<h2>European Computer Manufacturers Association (ECMA)</h2>
+		<ul>
+			<li>Основана в 1961</li>
+			<li>Цели: создание и публикация спецификаций в колаборациях</li>
+			<li>Более 400 стандартов</li>
+			<li>ECMA-119 – CD-ROM, ECMA-334 – C#, ECMA-372 – C++/CLI, </li>
+			<li>ECMA-262</li>
+
+		</ul>
+		<p class="note"><a href="https://en.wikipedia.org/wiki/List_of_Ecma_standards">https://en.wikipedia.org/wiki/List_of_Ecma_standards</a></p>
+	</section>
+
+	<section class="slide">
+		<h2>ECMAScript (ECMA-262)</h2>
+		<ul>
+			<li>ECMAScript - спецификация языка</li>
+			<li>Первая версия 1997</li>
+			<li>Новый релизный цикл с 2015 года</li>
+			<li>6th Edition -> ECMAScript 2015 и т.д.</li>
+			<li>ECMAScript - это не только JavaScript</li>
+		</ul>
+		<p class="note"><a href="https://en.wikipedia.org/wiki/ECMAScript">https://en.wikipedia.org/wiki/ECMAScript</a></p>
+	</section>
+
+	<section class="slide">
+		<figure>
+			<img class="cover" src="pictures/es-releases.png" alt="ECMAScript releases before 2017">
+		</figure>
+	</section>
+
+	<section class="slide">
+		<figure>
+			<img class="cover" src="pictures/ecma-cloud.png" alt="ECMAScript implementations">
+		</figure>
+	</section>
+
+	<section class="slide">
+		<h2>TC39 (Technical Committee 39)</h2>
+		<ul class="small-list">
+			<li>
+				Stage 0: strawman
+				<ul>
+					<li>предложения и планы для обсуждения на собрании комитета</li>
+				</ul>
+			</li>
+			<li class="next">
+				Stage 1: Proposal
+				<ul>
+					<li>формальное представление (API, examples), назначение отвественных из TC39</li>
+				</ul>
+			</li>
+			<li class="next">
+				Stage 2: Draft
+				<ul>
+					<li>проект спецификации, первая реализация с помощью polyfill, babel и т.д.</li>
+				</ul>
+			</li>
+			<li class="next">
+				Stage 3: Candidate
+				<ul>
+					<li>окончательная спецификация, одна реализация в браузере или качественный polyfill</li>
+				</ul>
+			</li>
+			<li class="next">Stage 4: Finished</li>
+		</ul>
+		<style>
+			.small-list {
+				font-size: 20px;
+			}
+		</style>
+	</section>
+
+	<section class="slide">
+		<h2 class="shout">ECMAScript 2016</h2>
+	</section>
+
+	<section class="slide code">
+		<h2>Array.prototype.includes</h2>
+
+		<h4>Signature:</h4>
+
 		<pre>
-			<code>&lt;!DOCTYPE html&gt;</code>
-			<code class="mark">&lt;html lang="en"&gt;</code>
-			<code><mark>&lt;head&gt;</mark> <span class="comment">&lt;!--Comment--&gt;</span></code>
-			<code>    &lt;title&gt;Shower&lt;/title&gt;</code>
-			<code>    &lt;meta charset="<mark class="important">UTF-8</mark>"&gt;</code>
-			<code>    &lt;link rel="stylesheet" href="screen.css"&gt;</code>
-			<code><mark>&lt;/head&gt;</mark></code>
+			<code class="js">Array.prototype.includes(value : any) : boolean</code>
+		</pre>
+
+		<h4>Example:</h4>
+
+		<pre>
+			<code class="js">['a', 'b', 'c'].includes('a')</code>
+		</pre>
+		<pre>
+			<code class="bash">&gt; true</code>
+		</pre>
+	</section>
+
+	<section class="slide code">
+		<h2>Exponentiation operator (**)</h2>
+		<h4>Example:</h4>
+
+		<pre>
+			<code class="js">6 ** 2</code>
+		</pre>
+		<pre>
+			<code class="bash">&gt; 36</code>
+		</pre>
+
+		<h4>The same</h4>
+
+		<pre>
+			<code class="js">Math.pow(6, 2)</code>
 		</pre>
 	</section>
 
 	<section class="slide">
-		<h2>Even tables</h2>
-		<table>
-		<tr>
-			<th scope="col">Locavore</th>
-			<th>Umami</th>
-			<th>Helvetica</th>
-			<th>Vegan</th>
-		</tr>
-		<tr>
-			<th scope="row">Fingerstache</th>
-			<td>Kale</td>
-			<td>Chips</td>
-			<td>Keytar</td>
-		</tr>
-		<tr>
-			<th scope="row">Sriracha</th>
-			<td>Gluten-free</td>
-			<td>Ennui</td>
-			<td>Keffiyeh</td>
-		</tr>
-		<tr>
-			<th scope="row">Thundercats</th>
-			<td>Jean</td>
-			<td>Shorts</td>
-			<td>Biodiesel</td>
-		</tr>
-		<tr>
-			<th scope="row">Terry</th>
-			<td>Richardson</td>
-			<td>Swag</td>
-			<td>Blog</td>
-		</tr>
-		</table>
-		<p>It’s good to have information organized.</p>
-	</section>
-
-	<section class="slide" id="picture">
-		<h2>Pictures</h2>
-		<figure>
-			<img class="cover" src="pictures/picture.jpg" alt="Orange typewriter on a wooden table close-up">
-			<figcaption class="copyright right white">
-				<a href="http://fiftyfootshadows.net/">© John Carey</a>
-			</figcaption>
-		</figure>
-		<style>
-			#picture h2 {
-				color: white;
-			}
-		</style>
+		<h2 class="shout">ECMAScript 2017</h2>
 	</section>
 
 	<section class="slide">
-		<h2 class="shout shrink">You can even shout this way</h2>
+		<h2>Async functions</h2>
+		<ul>
+			<li>Async function declarations: <code class="js">async function foo() {}</code></li>
+			<li>Async function expressions: <code class="js">const foo = async function () {};</code></li>
+			<li>Async method definitions: <code class="js">let obj = { async foo() {} }</code></li>
+			<li>Async arrow functions: <code class="js">const foo = async () => {};</code></li>
+			<li>Always returns Promise</li>
+		</ul>
+
+	</section>
+
+	<section class="slide code">
+		<h2>Object.entries</h2>
+
+		<h4>Signature:</h4>
+
+		<pre style="font-size: 18px;">
+			<code class="js">Object.entries(value : any) : Array<[string,any]></code>
+		</pre>
+
+		<h4>Example:</h4>
+
+		<pre style="font-size: 18px; padding-left: 30px">
+			<code class="js">let obj = { one: 1, two: 2 };</code>
+			<code class="js">for (let [k,v] of Object.entries(obj)) {</code>
+			<code class="js">    console.log(`${k}: ${v}`);</code>
+			<code class="js">}</code>
+		</pre>
+	</section>
+
+	<section class="slide code">
+		<h2>Object.values</h2>
+
+		<h4>Signature:</h4>
+
+		<pre>
+			<code class="js">Object.values(value : any) : Array&lt;any&gt;</code>
+		</pre>
+
+		<h4>Example:</h4>
+
+		<pre>
+			<code class="js">Object.values({ one: 1, two: 2 })</code>
+		</pre>
+		<pre>
+			<code class="bash">&gt; [ 1, 2 ]</code>
+		</pre>
+	</section>
+
+	<section class="slide code">
+		<h2>padStart and padEnd</h2>
+
+		<h4>Example:</h4>
+
+		<pre>
+			<code class="js">'x'.padStart(5, 'ab')</code>
+		</pre>
+		<pre>
+			<code class="bash">&gt; 'ababx'</code>
+		</pre>
+
+		<pre>
+			<code class="js">'x'.padEnd(5, 'ab')</code>
+		</pre>
+		<pre>
+			<code class="bash">&gt; 'xabab'</code>
+		</pre>
+	</section>
+
+	<section class="slide code">
+		<h2>Object.getOwnPropertyDescriptors</h2>
+
+		<pre style="font-size: 18px; padding-left: 30px">
+			<code class="js">const obj = { get es8() { return 888; } };</code>
+			<code class="js">Object.getOwnPropertyDescriptor(obj, 'es8');</code>
+		</pre>
+
+		<h4>Output:</h4>
+
+		<pre style="font-size: 18px">
+			<code class="bash">{</code>
+		</pre>
+
+		<pre style="font-size: 18px">
+			<code class="bash">  configurable: true,</code>
+		</pre>
+
+		<pre style="font-size: 18px">
+			<code class="bash">  enumerable: true,</code>
+		</pre>
+
+		<pre style="font-size: 18px">
+			<code class="bash">  get: function es8(){}</code>
+		</pre>
+
+		<pre style="font-size: 18px">
+			<code class="bash">  set: undefined</code>
+		</pre>
+
+		<pre style="font-size: 18px">
+			<code class="bash">}</code>
+		</pre>
+
 	</section>
 
 	<section class="slide">
-		<h2>Inner navigation</h2>
-		<ol>
-			<li>Lets you reveal list items one by one</li>
-			<li class="next">To keep some key points</li>
-			<li class="next">In secret from audience</li>
-			<li class="next">But it will work only once</li>
-			<li class="next">Nobody wants to see the same joke twice</li>
-		</ol>
+		<h2 class="shout">ECMAScript 2018</h2>
 	</section>
 
-	<section class="slide" id="see-more">
-		<h2 class="shout">
-			<img src="pictures/logo.svg" alt="Shower logo">
-			<a href="https://github.com/shower/shower">See more on GitHub</a>
-		</h2>
-		<style>
-			#see-more h2 {
-				font-size: 100px
-			}
+	<section class="slide code">
+		<h2>Asynchronous iteration</h2>
 
-			#see-more img {
-				width: 0.72em;
-				height: 0.72em;
-			}
-		</style>
+		<pre style="font-size: 18px; padding-left: 30px">
+			<code class="js">const promises = [</code>
+			<code class="js">  new Promise(resolve => resolve(1)),</code>
+			<code class="js">  new Promise(resolve => resolve(2)),</code>
+			<code class="js">]</code>
+			<code class="js">for await (const obj of promises) {</code>
+			<code class="js">  console.log(obj)</code>
+			<code class="js">}</code>
+		</pre>
+
+		<h4>Output:</h4>
+
+		<pre style="font-size: 18px">
+			<code class="bash">&gt; 1, 2</code>
+		</pre>
+	</section>
+
+	<section class="slide code">
+		<h2>Spread properties for Objects</h2>
+
+		<pre style="padding-left: 50px">
+			<code class="js">const obj = {foo: 1, bar: 2, baz: 3};</code>
+			<code class="js">const {foo, ...rest} = obj;</code>
+		</pre>
+
+		<h4>Output:</h4>
+
+		<pre>
+			<code class="bash">&gt; foo: 1</code>
+		</pre>
+
+		<pre>
+			<code class="bash">&gt; rest: {bar: 2, baz: 3}</code>
+		</pre>
+	</section>
+
+	<section class="slide code">
+		<h2>Promise.prototype.finally()</h2>
+
+		<pre style="padding-left: 50px">
+			<code class="js">promise</code>
+			<code class="js">.then(result => {···})</code>
+			<code class="js">.catch(error => {···})</code>
+			<code class="js">.finally(() => {···});</code>
+		</pre>
+
+		<br>
+
+		<ul>
+			<li>finally’s callback is always executed</li>
+		</ul>
+
+	</section>
+
+	<section class="slide code">
+		<h2>RegExp named capture groups</h2>
+
+		<pre style="font-size: 20px; padding-left: 40px">
+			<code class="js">const RE_DATE = /(?&lt;year&gt;[0-9]{4})-(?&lt;month&gt;[0-9]{2})-(?&lt;day&gt;[0-9]{2})/</code>
+			<code class="js">const matchObj = RE_DATE.exec('1999-12-31');</code>
+			<code class="js">const year = matchObj.groups.year; // 1999</code>
+			<code class="js">const month = matchObj.groups.month; // 12</code>
+			<code class="js">const day = matchObj.groups.day; // 31</code>
+		</pre>
+	</section>
+
+	<section class="slide code">
+		<h2>RegExp lookbehind assertions</h2>
+
+		<pre style="font-size: 20px; padding-left: 40px">
+			<code class="js">const RE_DOLLAR_PREFIX = /(?<=\$)foo/g;</code>
+			<code class="js">'$foo %foo foo'.replace(RE_DOLLAR_PREFIX, 'bar');</code>
+		</pre>
+
+		<h4>Output:</h4>
+
+		<pre>
+			<code class="bash">&gt; '$bar %foo foo'</code>
+		</pre>
+	</section>
+
+	<section class="slide code">
+		<h2>И еще</h2>
+		<ul>
+			<li>RegExp Unicode property escapes</li>
+			<li>s (dotAll) flag for regular expressions</li>
+			<li>Template Literal Revision</li>
+			<li>Trailing commas in function parameter lists and calls</li>
+			<li>Shared memory and atomics</li>
+		</ul>
+	</section>
+
+	<section class="slide">
+		<h2>Полезные ссылки</h2>
+		<ul>
+			<li><a href="http://kangax.github.io/compat-table/esnext/">http://kangax.github.io/compat-table/esnext/</a></li>
+			<li><a href="https://github.com/tc39">https://github.com/tc39</a></li>
+			<li><a href="http://exploringjs.com/">http://exploringjs.com/</a></li>
+			<li><a href="https://frontendian.co/the-tectonics-of-the-web">https://frontendian.co/the-tectonics-of-the-web</a></li>
+
+		</ul>
 	</section>
 
 	<footer class="badge">
-		<a href="https://github.com/shower/shower">Fork me on GitHub</a>
+		<a href="https://github.com/kirill3333/jsnn10">Fork me on GitHub</a>
 	</footer>
 
 	<div class="progress"></div>
 
 	<script src="node_modules/shower-core/shower.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/highlight.min.js"></script>
+	<script>hljs.initHighlightingOnLoad();</script>
 	<!-- Copyright © 2018 Yours Truly, Famous Inc. -->
 
 </body>
