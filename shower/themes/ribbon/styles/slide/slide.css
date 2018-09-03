@@ -53,7 +53,7 @@
     height: calc(var(--ribbon-size) * 2);
     background-image: url('ribbon.svg');
     background-size: cover;
-    color: #ffffff;
+    color: #000;
     counter-increment: slide;
     content: counter(slide);
     text-align: center;
